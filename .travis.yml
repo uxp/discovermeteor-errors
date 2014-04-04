@@ -7,6 +7,7 @@ before_install:
   - '[ "$(uname -m)" == "i686" -o "$(uname -m)" == "x86_64" ] && mkdir $HOME/.meteor-install-tmp'
   - "curl --fail https://warehouse.meteor.com/bootstrap/0.7.2/meteor-bootstrap-$( uname )_$( uname -m ).tar.gz | tar -xzf - -C $HOME/.meteor-install-tmp"
   - "[ -x $HOME/.meteor-install-tmp/.meteor/meteor ] && mv $HOME/.meteor-install-tmp/.meteor $HOME"
+  - '[ -x $HOME/.meteor/meteor ] && export PATH="$HOME/.meteor:$PATH"'
   - "echo 'installing meteorite'"
   - "npm install -g meteorite"
   - "echo 'installing runner'"
