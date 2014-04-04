@@ -1,5 +1,5 @@
 {
-  "name": "errors",
+  "name": "uxp-errors",
   "description": "A pattern to display application errors to the user",
   "homepage": "https://github.com/uxp/discovermeteor-errors",
   "author": "Tom Coleman <tom@thesnail.org>",
