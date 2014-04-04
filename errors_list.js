@@ -1,5 +1,5 @@
 (function() {
-  "use satrict";
+  "use strict";
 
   Template.meteorErrors.helpers({
     errors: function() {
