@@ -4,7 +4,10 @@ node_js:
   - "0.10"
 before_install:
   - "echo 'installing meteor'"
-  - "curl https://install.meteor.com | /bin/sh"
+  - "mkdir $HOME/.meteor-install-tmp"
+  - "curl --fail https://warehouse.meteor.com/bootstrap/0.7.2/meteor-bootstrap-Darwin_x86_64.tar.gz | tar -xzf - -C $HOME/.meteor-install-tmp"
+  - "[ -d $HOME/.meteor-install-tmp/.meteor/meteor ] && mv $HOME/.meteor-install-tmp/.meteor $HOME"
+  - "test -x $HOME/.meteor/meteor"
   - "echo 'installing meteorite'"
   - "npm install -g meteorite"
   - "echo 'installing runner'"
