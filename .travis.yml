@@ -3,4 +3,11 @@ language: node_js
 node_js:
   - "0.10"
 before_install:
-  - "curl -L http://git.io/ejPSng | /bin/sh"
+  - "echo 'installing meteor'"
+  - "curl https://install.meteor.com | /bin/sh"
+  - "echo 'installing meteorite'"
+  - "npm install -g meteorite"
+  - "echo 'installing runner'"
+  - "wget https://raw.github.com/arunoda/travis-ci-meteor-packages/master/Makefile"
+  - "wget https://raw.github.com/arunoda/travis-ci-meteor-packages/master/start_test.js"
+  - "wget https://raw.github.com/arunoda/travis-ci-meteor-packages/master/phantom_runner.js"
