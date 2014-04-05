@@ -6,11 +6,13 @@
   });
 
   Package.on_use(function(api, where) {
-    api.use(['minimongo', 'mongo-livedata', 'templating'], 'client');
+    api.use('minimongo',      'client');
+    api.use('mongo-livedata', 'client');
+    api.use('templating',     'client');
+
     api.add_files(['errors.js', 'errors_list.html', 'errors_list.js'], 'client');
-    if (api.export) {
-      api.export('Errors');
-    }
+
+    api.export('Errors');
   });
 
   Package.on_test(function(api) {
